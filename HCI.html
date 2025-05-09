@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Great UX Treasure Hunt</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>👽 The Great UX Treasure Hunt</h1>
+    <p>Ahoy, Treasure Hunter! Explore this map and uncover the hidden treasures of good design. Find the 18 hidden principles!</p>
+  </header>
+
+  <div class="tabs">
+    <!-- Tab Buttons -->
+    <div class="tab-buttons" role="tablist" aria-label="UX principles tabs">
+      <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="treasure1" id="btn-treasure1" onclick="openTab('treasure1', this)">Treasure #1</button>
+      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="treasure2" id="btn-treasure2" onclick="openTab('treasure2', this)">Treasure #2</button>
+      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="treasure3" id="btn-treasure3" onclick="openTab('treasure3', this)">Treasure #3</button>
+      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="treasure4" id="btn-treasure4" onclick="openTab('treasure4', this)">Treasure #4</button>
+      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="treasure5" id="btn-treasure5" onclick="openTab('treasure5', this)">Treasure #5</button>
+      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="treasure6" id="btn-treasure6" onclick="openTab('treasure6', this)">Treasure #6</button>
+      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="treasure7" id="btn-treasure7" onclick="openTab('treasure7', this)">Treasure #7</button>
+      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="treasure8" id="btn-treasure8" onclick="openTab('treasure8', this)">Treasure #8</button>
+      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="treasure9" id="btn-treasure9" onclick="openTab('treasure9', this)">Treasure #9</button>
+      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="treasure10" id="btn-treasure10" onclick="openTab('treasure10', this)">Treasure #10</button>
+      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="treasure11" id="btn-treasure11" onclick="openTab('treasure11', this)">Treasure #11</button>
+      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="treasure12" id="btn-treasure12" onclick="openTab('treasure12', this)">Treasure #12</button>
+      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="treasure13" id="btn-treasure13" onclick="openTab('treasure13', this)">Treasure #13</button>
+      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="treasure14" id="btn-treasure14" onclick="openTab('treasure14', this)">Treasure #14</button>
+      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="treasure15" id="btn-treasure15" onclick="openTab('treasure15', this)">Treasure #15</button>
+      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="treasure16" id="btn-treasure16" onclick="openTab('treasure16', this)">Treasure #16</button>
+      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="treasure17" id="btn-treasure17" onclick="openTab('treasure17', this)">Treasure #17</button>
+      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="treasure18" id="btn-treasure18" onclick="openTab('treasure18', this)">Treasure #18</button>
+    </div>
+
+    <!-- Tab Content -->
+    <div class="tab-content">
+      <!-- Treasure #1: Visibility -->
+      <div class="tab" id="treasure1" role="tabpanel" aria-labelledby="btn-treasure1" tabindex="0" style="display: block;">
+        <h2>Treasure #1: Visibility</h2>
+        <p>Principle: Make objects and their functions visible to users.</p>
+        <div class="example">
+          <button id="visibility-btn">Click Me!</button>
+          <p>This button will change color when clicked to indicate that the action was received.</p>
+        </div>
+      </div>
+
+      <!-- Treasure #2: Feedback -->
+      <div class="tab" id="treasure2" role="tabpanel" aria-labelledby="btn-treasure2" tabindex="0">
+        <h2>Treasure #2: Feedback</h2>
+        <p>Principle: Provide feedback to users when an action is performed.</p>
+        <div class="example">
+          <input type="text" id="feedback-input" placeholder="Type something..." />
+          <p id="feedback-output" aria-live="polite">No feedback yet...</p>
+          <button id="feedback-btn">Provide Feedback</button>
+        </div>
+      </div>
+
+      <!-- Treasure #3: Consistency -->
+      <div class="tab" id="treasure3" role="tabpanel" aria-labelledby="btn-treasure3" tabindex="0">
+        <h2>Treasure #3: Consistency</h2>
+        <p>Principle: Ensure consistency across similar elements.</p>
+        <div class="example">
+          <button class="consistent-btn">Next</button>
+          <button class="consistent-btn">Submit</button>
+          <p>The buttons are consistent in appearance, indicating the same level of importance and functionality.</p>
+        </div>
+      </div>
+
+      <!-- Treasure #4: Constraints -->
+      <div class="tab" id="treasure4" role="tabpanel" aria-labelledby="btn-treasure4" tabindex="0">
+        <h2>Treasure #4: Constraints</h2>
+        <p>Principle: Limit user actions to avoid errors.</p>
+        <div class="example">
+          <input type="text" id="constraint-name" placeholder="Enter your name" oninput="toggleNextBtn()" />
+          <button id="constraint-btn" disabled>Next</button>
+          <p>Input your name to enable the "Next" button.</p>
+        </div>
+      </div>
+
+      <!-- Treasure #5: Affordance -->
+      <div class="tab" id="treasure5" role="tabpanel" aria-labelledby="btn-treasure5" tabindex="0">
+        <h2>Treasure #5: Affordance</h2>
+        <p>Principle: Design objects to indicate their functionality.</p>
+        <div class="example">
+          <button id="open-chest-btn" class="raised-btn">Open Chest</button>
+          <p id="chest-message" style="font-weight:bold; margin-top:10px; color:#28a745;"></p>
+        </div>
+      </div>
+
+      <!-- Treasure #6: Learnability -->
+      <div class="tab" id="treasure6" role="tabpanel" aria-labelledby="btn-treasure6" tabindex="0">
+        <h2>Treasure #6: Learnability</h2>
+        <p>Principle: Make the system easy to learn for users.</p>
+        <div class="example">
+          <input type="text" id="learnability-code" placeholder="Enter treasure code" />
+          <p id="learnability-msg" style="margin-top:8px; font-weight:600; color:#007bff;"></p>
+        </div>
+      </div>
+
+      <!-- Treasure #7: Error Prevention -->
+      <div class="tab" id="treasure7" role="tabpanel" aria-labelledby="btn-treasure7" tabindex="0">
+        <h2>Treasure #7: Error Prevention</h2>
+        <p>Principle: Prevent errors before they occur.</p>
+        <div class="example">
+          <form id="error-prevention-form">
+            <input type="email" id="email" placeholder="Enter your email" required />
+            <button type="submit">Submit</button>
+            <p id="email-error" style="color: #d33; font-weight: 600; margin-top: 6px; display:none;"></p>
+          </form>
+        </div>
+      </div>
+
+      <!-- Treasure #8: Flexibility -->
+      <div class="tab" id="treasure8" role="tabpanel" aria-labelledby="btn-treasure8" tabindex="0">
+        <h2>Treasure #8: Flexibility</h2>
+        <p>Principle: Allow users to choose how to interact with the system.</p>
+        <div class="example">
+          <button id="quick-fill-btn1">Quick Fill</button>
+          <input type="text" id="flexibility-name" placeholder="Enter your name" />
+        </div>
+      </div>
+
+      <!-- Treasure #9: User Control -->
+      <div class="tab" id="treasure9" role="tabpanel" aria-labelledby="btn-treasure9" tabindex="0">
+        <h2>Treasure #9: User Control</h2>
+        <p>Principle: Provide users with control over their actions.</p>
+        <div class="example">
+          <button id="open-modal-btn">Open Modal</button>
+          <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-desc">
+            <div class="modal-content">
+              <span class="close-btn" id="close-modal-btn" role="button" aria-label="Close modal">&times;</span>
+              <h3 id="modal-title" style="margin-top:0;">Are you sure?</h3>
+              <p id="modal-desc">Are you sure you want to cancel?</p>
+              <div style="display:flex; justify-content:center; gap:15px; margin-top:15px;">
+                <button id="continue-btn">Continue</button>
+                <button id="cancel-adventure-btn">Cancel Adventure</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Treasure #10: Aesthetic Design -->
+      <div class="tab" id="treasure10" role="tabpanel" aria-labelledby="btn-treasure10" tabindex="0">
+        <h2>Treasure #10: Aesthetic Design</h2>
+        <p>Principle: Create a clean, visually pleasing design.</p>
+        <div class="example">
+          <form>
+            <input type="text" placeholder="Your Name" />
+            <input type="email" placeholder="Your Email" />
+            <textarea placeholder="Your Message"></textarea>
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Treasure #11: Simplicity -->
+      <div class="tab" id="treasure11" role="tabpanel" aria-labelledby="btn-treasure11" tabindex="0">
+        <h2>Treasure #11: Simplicity</h2>
+        <p>Principle: Keep things simple and focused on essential tasks.</p>
+        <div class="example">
+          <button id="simple-action-btn" class="simple-btn">Simple Action</button>
+          <p id="simple-action-msg" style="margin-top: 8px; font-weight: 600; color:#28a745;"></p>
+        </div>
+      </div>
+
+      <!-- Treasure #12: Flexibility and Efficiency -->
+      <div class="tab" id="treasure12" role="tabpanel" aria-labelledby="btn-treasure12" tabindex="0">
+        <h2>Treasure #12: Flexibility and Efficiency</h2>
+        <p>Principle: Provide shortcuts for advanced users without hindering beginners.</p>
+        <div class="example">
+          <button id="quick-fill-btn2">Quick Fill</button>
+          <input type="text" id="flex-eff-name" placeholder="Enter your name" />
+          <p>The "Quick Fill" button allows experienced users to speed up their process.</p>
+        </div>
+      </div>
+
+      <!-- Treasure #13: Recoverability -->
+      <div class="tab" id="treasure13" role="tabpanel" aria-labelledby="btn-treasure13" tabindex="0">
+        <h2>Treasure #13: Recoverability</h2>
+        <p>Principle: Let users undo actions or recover from errors easily.</p>
+        <div class="example">
+          <button id="undo-btn">Undo</button>
+          <p>This button allows users to recover from an accidental action.</p>
+        </div>
+      </div>
+
+      <!-- Treasure #14: Transparency -->
+      <div class="tab" id="treasure14" role="tabpanel" aria-labelledby="btn-treasure14" tabindex="0">
+        <h2>Treasure #14: Transparency</h2>
+        <p>Principle: Make the system's processes and state visible to the user.</p>
+        <div class="example">
+          <button id="show-info-btn">Show Info</button>
+          <div id="info" style="display:none;">
+            <p>This is some important information for you!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Treasure #15: Trustworthiness -->
+      <div class="tab" id="treasure15" role="tabpanel" aria-labelledby="btn-treasure15" tabindex="0">
+        <h2>Treasure #15: Trustworthiness</h2>
+        <p>Principle: Ensure users feel confident in the system.</p>
+        <div class="example">
+          <form>
+            <input type="password" placeholder="Enter Password" required />
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Treasure #16: Progress Indicators -->
+      <div class="tab" id="treasure16" role="tabpanel" aria-labelledby="btn-treasure16" tabindex="0">
+        <h2>Treasure #16: Progress Indicators</h2>
+        <p>Principle: Show progress so users know where they are in a task.</p>
+        <div class="example">
+          <progress value="50" max="100" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" role="progressbar"></progress>
+          <p>50% complete!</p>
+        </div>
+      </div>
+
+      <!-- Treasure #17: Error Recovery -->
+      <div class="tab" id="treasure17" role="tabpanel" aria-labelledby="btn-treasure17" tabindex="0">
+        <h2>Treasure #17: Error Recovery</h2>
+        <p>Principle: Help users recover from errors and continue their task.</p>
+        <div class="example">
+          <button id="handle-error-btn">Submit</button>
+          <p id="error-recovery-msg" style="margin-top:8px; color:#d33; font-weight:600;"></p>
+        </div>
+      </div>
+
+      <!-- Treasure #18: Contextual Help -->
+      <div class="tab" id="treasure18" role="tabpanel" aria-labelledby="btn-treasure18" tabindex="0">
+        <h2>Treasure #18: Contextual Help</h2>
+        <p>Principle: Provide assistance right when the user needs it.</p>
+        <div class="example">
+          <button id="show-help-btn">Show Help</button>
+          <div id="help" style="display:none;">
+            <p>This is some contextual help based on your action.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Open a tab and update button active states
+    function openTab(tabId, btn) {
+      const tabs = document.querySelectorAll('.tab');
+      tabs.forEach(tab => tab.style.display = 'none');
+
+      const btns = document.querySelectorAll('.tab-btn');
+      btns.forEach(b => b.classList.remove('active'));
+
+      document.getElementById(tabId).style.display = 'block';
+      btn.classList.add('active');
+    }
+
+    // Initially open first tab
+    window.onload = () => {
+      const firstBtn = document.querySelector('.tab-btn');
+      openTab('treasure1', firstBtn);
+    };
+
+    // Treasure #1: Visibility - button color change on click
+    const visibilityBtn = document.getElementById('visibility-btn');
+    visibilityBtn.addEventListener('click', () => {
+      visibilityBtn.style.backgroundColor = '#45a049';
+      visibilityBtn.textContent = 'Clicked!';
+      visibilityBtn.disabled = true;
+    });
+
+    // Treasure #2: Feedback
+    const feedbackBtn = document.getElementById('feedback-btn');
+    feedbackBtn.addEventListener('click', () => {
+      const input = document.getElementById('feedback-input').value.trim();
+      const output = document.getElementById('feedback-output');
+      if (input) {
+        output.textContent = `You typed: ${input}`;
+      } else {
+        output.textContent = 'Please type something first.';
+      }
+    });
+
+    // Treasure #4: Constraints - toggle next button enable state
+    function toggleNextBtn() {
+      const nameInput = document.getElementById('constraint-name').value.trim();
+      const nextBtn = document.getElementById('constraint-btn');
+      nextBtn.disabled = !nameInput;
+    }
+
+    // Treasure #5: Affordance - open chest
+    const openChestBtn = document.getElementById('open-chest-btn');
+    const chestMessage = document.getElementById('chest-message');
+    openChestBtn.addEventListener('click', () => {
+      chestMessage.textContent = 'Chest opened! You found a UX gem!';
+      openChestBtn.disabled = true;
+      openChestBtn.style.backgroundColor = '#ccc';
+      openChestBtn.textContent = 'Opened';
+    });
+
+    // Treasure #6: Learnability
+    const learnabilityCode = document.getElementById('learnability-code');
+    const learnabilityMsg = document.getElementById('learnability-msg');
+    learnabilityCode.addEventListener('input', () => {
+      if (learnabilityCode.value.trim().toLowerCase() === 'ux123') {
+        learnabilityMsg.textContent = 'Correct code! Easy to learn, right?';
+      } else {
+        learnabilityMsg.textContent = '';
+      }
+    });
+
+    // Treasure #7: Error Prevention - email validation
+    const emailForm = document.getElementById('error-prevention-form');
+    const emailInput = emailForm.querySelector('#email');
+    const emailError = document.getElementById('email-error');
+    emailForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const emailVal = emailInput.value.trim();
+      const emailRegex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
+      if (!emailRegex.test(emailVal)) {
+        emailError.style.display = 'block';
+        emailError.textContent = 'Please enter a valid email address.';
+        emailInput.focus();
+      } else {
+        emailError.style.display = 'none';
+        alert('Form submitted successfully!');
+        emailForm.reset();
+      }
+    });
+
+    // Treasure #8: Flexibility - Quick fill
+    const quickFillBtn1 = document.getElementById('quick-fill-btn1');
+    const flexibilityName = document.getElementById('flexibility-name');
+    quickFillBtn1.addEventListener('click', () => {
+      flexibilityName.value = 'Jude "kalbo" Sarmiento';
+    });
+
+    // Treasure #9: User Control - modal open/close
+    const modal = document.getElementById('modal');
+    const openModalBtn = document.getElementById('open-modal-btn');
+    const closeModalBtn = document.getElementById('close-modal-btn');
+    openModalBtn.addEventListener('click', () => {
+      modal.style.display = 'flex';
+    });
+    closeModalBtn.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+    window.addEventListener('click', (e) => {
+      if(e.target === modal) modal.style.display = 'none';
+    });
+
+    // Treasure #11: Simplicity - simple action
+    const simpleActionBtn = document.getElementById('simple-action-btn');
+    const simpleActionMsg = document.getElementById('simple-action-msg');
+    simpleActionBtn.addEventListener('click', () => {
+      simpleActionMsg.textContent = 'Simple action executed!';
+      setTimeout(() => {
+        simpleActionMsg.textContent = '';
+      }, 1500);
+    });
+
+    // Treasure #12: Flexibility and Efficiency - Quick fill
+    const quickFillBtn2 = document.getElementById('quick-fill-btn2');
+    const flexEffName = document.getElementById('flex-eff-name');
+    quickFillBtn2.addEventListener('click', () => {
+      flexEffName.value = 'UX Pro';
+    });
+
+    // Treasure #13: Recoverability - undo action
+    const undoBtn = document.getElementById('undo-btn');
+    undoBtn.addEventListener('click', () => {
+      alert('Action undone!');
+    });
+
+    // Treasure #14: Transparency - show info
+    const showInfoBtn = document.getElementById('show-info-btn');
+    const infoDiv = document.getElementById('info');
+    showInfoBtn.addEventListener('click', () => {
+      infoDiv.style.display = infoDiv.style.display === 'block' ? 'none' : 'block';
+    });
+
+    // Treasure #17: Error Recovery - handle error
+    const handleErrorBtn = document.getElementById('handle-error-btn');
+    const errorRecoveryMsg = document.getElementById('error-recovery-msg');
+    handleErrorBtn.addEventListener('click', () => {
+      errorRecoveryMsg.textContent = 'An error occurred, but you can try again.';
+      setTimeout(() => {
+        errorRecoveryMsg.textContent = '';
+      }, 3000);
+    });
+
+    // Treasure #18: Contextual Help - show help
+    const showHelpBtn = document.getElementById('show-help-btn');
+    const helpDiv = document.getElementById('help');
+    showHelpBtn.addEventListener('click', () => {
+      helpDiv.style.display = helpDiv.style.display === 'block' ? 'none' : 'block';
+    });
+  </script>
+</body>
+</html>
+</content>
+</create_file>
+
+
